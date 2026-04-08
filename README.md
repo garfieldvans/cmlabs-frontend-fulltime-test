@@ -2,8 +2,14 @@
 
 Aplikasi web untuk menjelajahi resep makanan, ingredients, dan kategori dari seluruh dunia. Dibangun dengan teknologi modern Next.js 16 dan React 19 dengan desain responsive yang sempurna untuk semua ukuran perangkat.
 
+## 🌐 Live Demo
+
+Akses demo app langsung di: **[https://meals-diary-app.vercel.app/](https://meals-diary-app.vercel.app/)**
+
+
 ## 📋 Daftar Isi
 
+- [Live Demo](#-live-demo)
 - [Fitur Utama](#fitur-utama)
 - [Tech Stack](#tech-stack)
 - [Instalasi](#instalasi)
@@ -47,6 +53,11 @@ Aplikasi web untuk menjelajahi resep makanan, ingredients, dan kategori dari sel
 ### Steps
 
 1. **Clone atau download project**
+
+```bash 
+git clone https://github.com/garfieldvans/cmlabs-frontend-fulltime-test 
+```
+lalu buka directory projek
 ```bash
 cd meals-app
 ```
@@ -79,58 +90,6 @@ npm start
 ### Lint Project
 ```bash
 npm run lint
-```
-
-## 📁 Struktur Project
-
-```
-meals-app/
-├── app/
-│   ├── components/
-│   │   ├── Navbar.tsx              # Navigation bar
-│   │   ├── Navbar.css
-│   │   ├── HeroBanner.tsx           # Hero section
-│   │   ├── HeroBanner.css
-│   │   ├── Breadcrumb.tsx           # Breadcrumb navigation
-│   │   ├── Breadcrumb.css
-│   │   ├── Pagination.tsx           # Pagination controls
-│   │   ├── Pagination.css
-│   │   ├── meals/
-│   │   │   ├── MealsList.tsx        # Meals grid list
-│   │   │   ├── MealsList.css
-│   │   │   ├── MealCard.tsx         # Individual meal card
-│   │   │   └── MealCard.css
-│   │   └── ingredients/
-│   │       ├── IngredientsList.tsx  # Ingredients list with filters
-│   │       ├── IngredientsList.css
-│   │       ├── IngredientCard.tsx   # Individual ingredient card
-│   │       └── IngredientCard.css
-│   │
-│   ├── foods/
-│   │   ├── page.tsx                 # Foods list page
-│   │   ├── Foods.css
-│   │   └── [mealid]/
-│   │       └── page.tsx             # Meal detail page
-│   │
-│   ├── ingredients/
-│   │   ├── page.tsx                 # Ingredients page
-│   │   └── [ingredients]/
-│   │       └── page.tsx             # Ingredient detail page
-│   │
-│   ├── lib/
-│   │   └── datadb.ts                # API calls & data fetching
-│   │
-│   ├── globals.css                  # Global styles
-│   ├── layout.tsx                   # Root layout
-│   └── page.tsx                     # Home page
-│
-├── public/
-│   └── images/                      # Static images
-│
-├── package.json
-├── tsconfig.json
-├── next.config.ts
-└── README.md
 ```
 
 ## 🌐 Fitur & Pages
@@ -172,9 +131,6 @@ Project ini menggunakan **TheMealDB API** - database gratis berisi ribuan resep 
 ### API Endpoints yang Digunakan:
 
 ```typescript
-// Get semua kategori
-GET /api/json/v1/1/categories.php
-
 // Get semua ingredients
 GET /api/json/v1/1/list.php?i=list
 
@@ -214,11 +170,28 @@ Semua CSS telah dioptimalkan untuk mobile-first approach dengan media queries ya
 
 ## 💡 Tips Penggunaan
 
-1. **Browse Meals**: Kunjungi halaman Foods untuk melihat resep
-2. **Search**: Gunakan search bar untuk mencari resep spesifik
-3. **Filter by Ingredients**: Klik ingredient di home page untuk melihat resep yang memakainya
-4. **Bookmark**: Simpan resep favorit Anda (fitur dapat ditambahkan)
-5. **Share**: Share resep dengan teman
+1. **Browse Meals**: Kunjungi halaman Foods untuk melihat resep terbaru
+2. **Filter Ingredients**: Klik ingredient di home page untuk melihat resep yang memakainya
+3. **Sort by Ingredient**: Gunakan ingredient page untuk filter berdasarkan huruf dan jumlah item
+4. **Lihat Detail Resep**: Klik meal card untuk melihat instruksi lengkap dan video tutorial
+5. **Responsive**:  Aplikasi fully responsive di mobile, tablet, dan desktop
+
+## ⚡ Quick Start
+
+```bash
+# Clone project
+git clone <repository-url>
+cd meals-app
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Buka browser
+# http://localhost:3000
+```
 
 ## 🐛 Development Notes
 
@@ -234,25 +207,11 @@ Tidak ada environment variables yang diperlukan karena menggunakan public API.
 
 ## 🚀 Deployment
 
-Project dapat di-deploy ke:
-- **Vercel** (Recommended - creators of Next.js)
-- **Netlify**
-- **AWS**
-- **Self-hosted server**
+### Akses Aplikasi Live:
+- **URL**: [https://meals-diary-app.vercel.app/](https://meals-diary-app.vercel.app/)
+- **Status**: ✅ Active
+- **Platform**: Vercel (recommended for Next.js)
 
 ## 📄 License
 
 Project ini adalah project pembelajaran dan open untuk digunakan.
-
-## 🤝 Kontribusi
-
-Untuk kontribusi, silakan:
-1. Fork repository
-2. Buat branch features
-3. Commit changes
-4. Push ke branch
-5. Buat Pull Request
-
----
-
-**Built with ❤️ using Next.js & React**
