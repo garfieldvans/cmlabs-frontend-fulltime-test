@@ -38,7 +38,6 @@ export default function MealsList({ items, title }: { items: any[], title?: stri
   return (
     <div className="meals-container">
 
-      {/* SEARCH */}
       <div className="meals-search">
         {title && <h2 className="">{title}</h2>}
         <input
@@ -50,19 +49,16 @@ export default function MealsList({ items, title }: { items: any[], title?: stri
         />
       </div>
 
-      {/* RESULT COUNT */}
       <p className="meals-count">
         {filteredMeals.length} meals found
       </p>
 
-      {/* GRID */}
       <div className="meals-grid">
         {paginatedMeals.map((meal) => (
           <MealCard key={meal.idMeal} meal={meal} />
         ))}
       </div>
 
-      {/* PAGINATION */}
       <Pagination 
         page={page}
         totalPages={totalPages}

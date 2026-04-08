@@ -6,7 +6,6 @@ export default function HeroBanner() {
     return (
         <section className="hero-banner">
 
-            {/* Background Image */}
             <Image
                 src="/images/food-banner.jpg"
                 alt="Food Banner"
@@ -15,10 +14,8 @@ export default function HeroBanner() {
                 className="hero-banner-image"
             />
 
-            {/* Overlay */}
             <div className="hero-banner-overlay"></div>
 
-            {/* Content */}
             <div className="hero-banner-content">
                 <h1 className="hero-banner-title">
                     Discover Delicious Recipes

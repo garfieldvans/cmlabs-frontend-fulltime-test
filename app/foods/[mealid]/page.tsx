@@ -32,7 +32,6 @@ export default async function MealDetailPage({
         <div className="content-container meal-detail">
             <h1 className="meal-title">{meal.strMeal}</h1>
 
-            {/* HEAD SECTION */}
             <div className="head-content">
 
                 <div className="meal-image-wrapper">
@@ -70,7 +69,6 @@ export default async function MealDetailPage({
                 )}
             </div>
 
-            {/* INSTRUCTIONS */}
             <section className="meal-instructions">
 
                 <h2>Instructions</h2>

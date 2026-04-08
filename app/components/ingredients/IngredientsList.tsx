@@ -17,7 +17,6 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
 
   const filterRef = useRef<HTMLDivElement>(null);
 
-  /* CLICK OUTSIDE */
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -35,7 +34,6 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
     };
   }, []);
 
-  /* FILTER LOGIC */
   const filtered = useMemo(() => {
     let data = ingredients;
 
@@ -78,7 +76,6 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
 
       <div className="content-toolbar">
 
-        {/* SEARCH */}
         <input
           type="text"
           placeholder="Search ingredient..."
@@ -91,7 +88,6 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
           }}
         />
 
-        {/* FILTER */}
         <div className="filter-wrapper" ref={filterRef}>
           <p className="ingredients-count">
             {filtered.length} ingredients found
@@ -109,7 +105,6 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
           {showFilter && (
             <div className="filter-popup">
 
-              {/* ALPHABET FILTER*/}
               <div className="filter-group">
                 <p className="filter-title">Alphabet</p>
 

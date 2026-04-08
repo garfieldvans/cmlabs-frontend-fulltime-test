@@ -10,7 +10,6 @@ interface PaginationProps {
 }
 
 export default function Pagination({ page, totalPages, onPageChange }: PaginationProps) {
-  /* SMART PAGINATION */
   const paginationNumbers = useMemo(() => {
     const pages: (number | string)[] = [];
 
