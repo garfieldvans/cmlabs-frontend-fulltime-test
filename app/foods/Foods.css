@@ -1,0 +1,8 @@
+.page-title {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+}

@@ -1,0 +1,50 @@
+.meal-card{
+  position:relative;
+  border-radius:12px;
+  overflow:hidden;
+  display:block;
+}
+
+.meal-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.meal-card:hover img{
+  transform:scale(1.05);
+}
+
+.meal-overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:10px;
+  background:linear-gradient(to top, #341700, #ffffff00);
+}
+
+.meal-overlay p{
+  color:white;
+  font-weight:500;
+}
+
+@media (max-width: 480px) {
+  .meal-card img {
+    height: 160px;
+  }
+
+  .meal-overlay p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .meal-card img {
+    height: 190px;
+  }
+
+  .meal-overlay p {
+    font-size: 0.9rem;
+  }
+}
