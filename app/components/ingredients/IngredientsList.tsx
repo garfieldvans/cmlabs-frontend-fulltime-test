@@ -12,7 +12,7 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
   const [search, setSearch] = useState("");
   const [letter, setLetter] = useState("All");
   const [showFilter, setShowFilter] = useState(false);
-  const [perPage, setPerPage] = useState(25);
+  const [perPage, setPerPage] = useState(24);
   const [page, setPage] = useState(1);
 
   const filterRef = useRef<HTMLDivElement>(null);
@@ -138,7 +138,7 @@ export default function IngredientsList({ ingredients }: { ingredients: any[] })
                 <p className="filter-title">Show per page</p>
 
                 <div className="item-show">
-                  {[25, 50, 100].map((n) => (
+                  {[24, 50, 100].map((n) => (
                     <button
                       key={n}
                       className={perPage === n ? "active" : ""}
