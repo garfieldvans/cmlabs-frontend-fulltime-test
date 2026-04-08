@@ -51,7 +51,7 @@
     text-align: center;
 }
 
-.ingredients-grid {
+.recipes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -87,6 +87,8 @@
 .instructions-content p {
     line-height: 1.3;
     color: #444;
+    border-left: 1px solid gray;
+    padding-left: 8px;
 }
 
 .tags-wrapper {
@@ -148,6 +150,7 @@
     align-items: center;
     margin: auto;
     border-radius: 8px;
+    margin-top: 20px;
 }
 
 @media (max-width: 480px) {
@@ -178,8 +181,8 @@
         margin-bottom: 14px;
     }
 
-    .ingredients-grid {
-        grid-template-columns: 1fr;
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
@@ -231,7 +234,7 @@
         width: 100%;
     }
 
-    .ingredients-grid {
+    .recipes-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
@@ -254,7 +257,7 @@
         max-width: 60%;
     }
 
-    .ingredients-grid {
+    .recipes-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 

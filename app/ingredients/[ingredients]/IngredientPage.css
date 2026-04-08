@@ -33,11 +33,11 @@
     margin: auto;
 }
 
-.meals-grid {
+/* .meals-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-}
+} */
 
 .content-hero {
     position: relative;
@@ -118,10 +118,10 @@
         padding: 32px 16px;
     }
 
-    .meals-grid {
+    /* .meals-grid {
         grid-template-columns: 1fr;
         gap: 12px;
-    }
+    } */
 
     .content-hero {
         flex-direction: column;
@@ -154,7 +154,7 @@
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 767px) {
     .ingredient-hero {
         height: 220px;
     }
@@ -167,10 +167,10 @@
         padding: 42px 20px;
     }
 
-    .meals-grid {
+    /* .meals-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
-    }
+    } */
 
     .content-hero {
         flex-direction: column;
@@ -189,14 +189,23 @@
     }
 }
 
-@media(min-width:768px) {
-    .meals-grid {
-        grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) {
+    .ingredient-hero {
+        height: 280px;
     }
 
     .ingredient-hero h1 {
         font-size: 36px;
     }
+
+    .ingredient-meals {
+        padding: 50px 30px;
+    }
+
+    /* .meals-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    } */
 
     .ingredient-title {
         font-size: 2rem;
@@ -216,13 +225,31 @@
     }
 }
 
-@media(min-width:1024px) {
-    .meals-grid {
-        grid-template-columns: repeat(4, 1fr);
+@media (min-width: 1024px) {
+    .ingredient-hero {
+        height: 320px;
     }
 
     .ingredient-hero h1 {
         font-size: 42px;
+    }
+
+    .ingredient-meals {
+        padding: 60px 40px;
+    }
+
+    /* .meals-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    } */
+
+    .content-hero {
+        position: relative;
+    }
+
+    .content-hero img {
+        max-width: 100%;
+        height: 100%;
     }
 
     .ingredient-title {
@@ -246,10 +273,5 @@
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .content-hero img {
-        max-width: 100%;
-        height: 100%;
     }
 }

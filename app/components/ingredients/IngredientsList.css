@@ -153,7 +153,7 @@ button.active {
 
 @media (max-width: 480px) {
     .ingredients-section {
-        padding: 12px 16px;
+        padding: 12px 4px;
     }
 
     .ingredients-title {
@@ -166,7 +166,6 @@ button.active {
     }
 
     .content-toolbar {
-        flex-direction: column;
         gap: 12px;
     }
 
@@ -177,13 +176,11 @@ button.active {
     }
 
     .filter-popup {
-        width: calc(100vw - 32px);
-        right: auto;
-        left: 16px;
+        right: 0;
+        left: auto;
     }
 
     .ingredients-grid {
-        grid-template-columns: 1fr;
         gap: 12px;
     }
 

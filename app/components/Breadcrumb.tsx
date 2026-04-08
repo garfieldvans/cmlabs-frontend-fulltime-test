@@ -9,18 +9,35 @@ import { FiChevronRight } from "react-icons/fi";
 export default function AutoBreadcrumb() {
     const pathname = usePathname();
     const [mealName, setMealName] = useState<string | null>(null);
+    const [ingredientName, setIngredientName] = useState<string | null>(null);
 
-    const pathSegments = pathname.split("/").filter(Boolean);
+    const pathSegments = pathname
+        .split("/")
+        .filter(Boolean)
+        .map(segment => decodeURIComponent(segment));
 
     useEffect(() => {
-        const lastSegment = pathSegments[pathSegments.length - 1];
+        const isMealDetail = pathSegments.length >= 2 && 
+                            pathSegments[0] === "foods" && 
+                            !isNaN(Number(pathSegments[pathSegments.length - 1]));
+        
+        const isIngredientDetail = pathSegments.length >= 2 && 
+                                   pathSegments[0] === "ingredients" && 
+                                   pathSegments.length > 1;
 
-        if (pathSegments[0] === "foods" && lastSegment && !isNaN(Number(lastSegment))) {
-            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${lastSegment}`)
+        if (isMealDetail) {
+            const mealId = pathSegments[pathSegments.length - 1];
+            fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
                 .then(res => res.json())
                 .then(data => {
-                    setMealName(data.meals?.[0]?.strMeal);
-                });
+                    setMealName(data.meals?.[0]?.strMeal || null);
+                })
+                .catch(err => console.error("Error fetching meal:", err));
+        }
+
+        if (isIngredientDetail) {
+            const ingredientSegment = pathSegments[pathSegments.length - 1];
+            setIngredientName(ingredientSegment);
         }
     }, [pathname]);
 
@@ -31,8 +48,15 @@ export default function AutoBreadcrumb() {
             .replace(/-/g, " ")
             .replace(/\b\w/g, (l) => l.toUpperCase());
 
-        if (index === pathSegments.length - 1 && mealName) {
+        const isLastSegment = index === pathSegments.length - 1;
+        const isMealDetailPage = pathSegments.length >= 2 && 
+                                pathSegments[0] === "foods" && 
+                                !isNaN(Number(pathSegments[pathSegments.length - 1]));
+
+        if (isLastSegment && isMealDetailPage && mealName) {
             label = mealName;
+        } else if (isLastSegment && ingredientName && pathSegments[0] === "ingredients") {
+            label = ingredientName;
         }
 
         return { label, href };

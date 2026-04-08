@@ -48,7 +48,7 @@ export default async function MealDetailPage({
                 <div className="meal-ingredients">
                     <h2>Ingredients</h2>
 
-                    <ul className="ingredients-grid">
+                    <ul className="recipes-grid">
                         {ingredients.map((item, index) => (
                             <li key={index} className="ingredient-item">
                                 <span className="ingredient-name">{item.ingredient}</span>
